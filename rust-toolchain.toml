@@ -1,5 +1,9 @@
 [toolchain]
+<<<<<<< HEAD
 channel = "1.80.0"
+=======
+channel = "1.85.0"
+>>>>>>> 54992656 (Repo File Sync: Update rust to 1.85.0)
 
 [tool]
 cargo-make = "0.37.9"

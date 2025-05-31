@@ -29,4 +29,8 @@ jobs:
       issues: write
       pull-requests: write
 
+<<<<<<< HEAD
     uses: microsoft/mu_devops/.github/workflows/Stale.yml@v12.0.2
+=======
+    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v15.0.1
+>>>>>>> 54992656 (Repo File Sync: Update rust to 1.85.0)
