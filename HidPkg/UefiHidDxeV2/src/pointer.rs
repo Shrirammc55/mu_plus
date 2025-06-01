@@ -19,10 +19,15 @@ use alloc::{
 use r_efi::{efi, protocols};
 
 use hidparser::{
-    report_data_types::{ReportId, Usage},
     ReportDescriptor, ReportField, VariableField,
+    report_data_types::{ReportId, Usage},
 };
+<<<<<<< HEAD
 use rust_advanced_logger_dxe::{debugln, function, DEBUG_ERROR, DEBUG_VERBOSE};
+=======
+use mu_rust_helpers::function;
+use rust_advanced_logger_dxe::{DEBUG_ERROR, DEBUG_VERBOSE, debugln};
+>>>>>>> 1b641d14 (Build Hid rust module with 1.85 compiler)
 
 use self::absolute_pointer::PointerContext;
 use crate::{
@@ -175,11 +180,7 @@ impl PointerHidHandler {
                 self.input_reports.insert(report_data.report_id, report_data);
             }
         }
-        if !self.input_reports.is_empty() {
-            Ok(())
-        } else {
-            Err(efi::Status::UNSUPPORTED)
-        }
+        if !self.input_reports.is_empty() { Ok(()) } else { Err(efi::Status::UNSUPPORTED) }
     }
 
     // Helper routine that handles projecting relative and absolute axis reports onto the fixed
